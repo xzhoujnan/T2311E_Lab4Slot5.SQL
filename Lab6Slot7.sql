@@ -1,0 +1,3 @@
+CREATE TABLE products(id varchar (25) PRIMARY KEY, name varchar (255) NOT NULL UNIQUE);
+CREATE TABLE responsible_persons(id varchar (25) PRIMARY KEY, name varchar (255) NOT NULL UNIQUE);
+CREATE TABLE product_details(id varchar (25) PRIMARY KEY, date_of_manufacture datetime not null unique, product_id varchar(25) foreign key references products(id), responsible_person_id varchar(25) foreign key references responsible_persons(id));
